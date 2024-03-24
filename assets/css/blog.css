@@ -1,0 +1,12 @@
+* {
+    font-family: "quicksand";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgb(34, 110, 129);
+    background-color: azure;
+    min-width: 100vw;
+    min-height: 100vh;
+}
