@@ -6,21 +6,28 @@
 }
 
 body {
-    color: rgb(34, 110, 129);
-    background-color: azure;
-    display: flex;
-    justify-content: space-evenly;
     min-width: 100vw;
     min-height: 100vh;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: azure;
+}
+
+#container {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    height: 100vh;
+    width: 70vw;
     border: 3px solid;
+    box-shadow:0 15px 15px 5px rgb(80, 79, 79) ;
     
 }
 
-#notebook {
+#notebookHoles {
     flex-basis: 15%;
-    border-right: 3px solid ;
-    height: 100vh;
+    border-right: 3px solid rgb(255, 220, 226) ;
+    height: 100%;
     
 }
 
@@ -45,21 +52,21 @@ li {
  }
 
 #form {
-     /* margin-left: 60px; */
      flex-basis: 85%;
      height: 100vh;
      width: 100%;
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
 }
+
 #formheader {
     flex-basis: 10%;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid rgb(255, 220, 226);
+    text-align: center;
     
 }
 h1 {
-    font-size: 50px;
+    font-size: 70px;
     margin-left: 20px;
     
 }
@@ -69,3 +76,24 @@ h2 {
     margin: 20px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+} 
+
+#textareaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.textarea {
+    margin:20px 2px;
+    font-size: 15px;
+}
+
+#button {
+    font-size: 25px;
+    width: 15%;
+    align-self: center;
+    background-color:rgb(255, 220, 226);

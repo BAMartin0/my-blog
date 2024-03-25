@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="./assets/css/form.css" />
   </head>
   <body>
-    <div id="notebook">
-      <ul style="list-style-type: none">
-        <li id="styling1">&#9898;</li>
-        <li>&#9898;</li>
-        <li id="styling2">&#9898;</li>
-      </ul>
-    </div>
-    <main id="form">
-      <div id="formheader">
-        <h1>My&nbsp;First&nbsp;Blog&#9998;</h1>
-      </div>
-      <div>
-        <h2>Spill here...</h2>
-        <section id="username"></section>
-        <section id="title"></section>
-        <section id="content"></section>
-      </div>
-    </main>
+     <div id="container">
+         <div id="notebookHoles">
+          <ul style="list-style-type: none">
+             <li id="styling1">&#9898;</li>
+             <li>&#9898;</li>
+             <li id="styling2">&#9898;</li>
+          </ul>
+         </div>
+         <main id="form">
+             <div id="formheader">
+                 <h1>My&nbsp;First&nbsp;Blog&#9998;</h1>
+             </div>
+             <form action="">
+                 <h2>Spill here...</h2>
+                 <div id="textareaContainer">
+                     <textarea placeholder="Username" class="textarea"></textarea>
+                     <textarea placeholder="Title" class="textarea"></textarea>
+                     <textarea placeholder="What's on your mind?" class="textarea" rows="10"></textarea>
+                     <button id="button" >SUBMIT</button>
+                 </div> 
+             </form>
+         </main>
+     </div>
   </body>
 </html>
