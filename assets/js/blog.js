@@ -1,29 +1,22 @@
-const goBack = document.getElementById('goBack')
+const blogEntryContainer = document.getElementById("blogEntries");
+const blogEntryArray = JSON.parse(localStorage.getItem("blogEntryArray"));
 
-// // const username = localStorage.getItem
 
-// // if (username) {
-    
-// // }
+for (let i = 0; i < blogEntryArray.length; i++) {
+  const blogDiv = document.createElement("div");
+  const usernameDiv = document.createElement("h3");
+  const titleDiv = document.createElement("h4");
+  const contentDiv = document.createElement("p");
 
-// // localStorage.setItem("username", "")
+  // add the content to the elements
+  blogDiv.classList.add("blogDiv");
 
-// const h2El = document.getElementById("blogEntry")
+  usernameDiv.textContent = blogEntryArray[i].username;
+  titleDiv.textContent = blogEntryArray[i].title;
+  contentDiv.textContent = blogEntryArray[i].content;
 
-// const entry = {
-//     username: "Britt",
-//     title: "How I made it through",
-//     content: "Jesus"
-// }
+  // append the elements to the the blogEntryContainer
 
-// localStorage.setItem("entry", JSON.stringify(entry));
-
-// const lsObject = JSON.parse(localStorage.getItem("entry"));
-
-// h2El.textContent = lsObject.location
-
-// // localStorage.clear
-
-goBack.addEventListener("click", function () {
-    window.location.href = 'http://127.0.0.1:5501/index.html?'
-})
+  blogDiv.append(usernameDiv, titleDiv, contentDiv);
+  blogEntryContainer.append(blogDiv);
+}

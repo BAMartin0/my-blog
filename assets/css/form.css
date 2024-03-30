@@ -67,12 +67,11 @@ li {
     flex-basis: 10%;
     border-bottom: 3px solid rgb(255, 220, 226);
     text-align: center;
-    
 }
+
 h1 {
     font-size: 70px;
     margin-left: 20px;
-    
 }
 
 h2 {
@@ -97,14 +96,9 @@ form {
     background-color: white;
 }
 
-#button {
+#submitButton {
     font-size: 25px;
     width: 25%;
     align-self: center;
     background-color:rgb(255, 220, 226);
-}
-
-#darkLight {
-    border: 2px solid black;
-    font-size: 30px; 
 }

@@ -1,59 +1,29 @@
-const blogEntry = document.getElementById('button'); 
-const mode = document.getElementById('darkLight'); 
-const container = document.getElementById('container');
-const textArea = document.querySelectorAll('.textarea')
+const button = document.getElementById("blogEntry");
+const container = document.getElementById("container");
+const textArea = document.querySelectorAll(".textarea");
+const username = document.getElementById("username");
+const title = document.getElementById("title");
+const content = document.getElementById("content");
 
+button.addEventListener("submit", function (event) {
+  event.preventDefault();
 
+  const blogEntry = {
+    username: username.value,
+    title: title.value,
+    content: content.value,
+  };
 
-blogEntry.addEventListener("click", function(event) {
-    event.preventDefault();
+  handleLocalStorage(blogEntry);
 
-    const username = document.getElementById('username').value;
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
-
-    localStorage.setItem("username", username);
-    localStorage.setItem("title", title);
-    localStorage.setItem("content", content);
-
-    const retrievedUsername = localStorage.getItem("username");
-    const retrievedTitle = localStorage.getItem("title");
-    const retrievedContent = localStorage.getItem("content");
-
-    console.log("Username:", retrievedUsername);
-    console.log("Title:", retrievedTitle);
-    console.log("Content:", retrievedContent);
-
-
-    alert("Your entry has been received!");
-    
+  window.location.href = "./blog.html";
 });
 
-mode.addEventListener("click", function () {
-    console.log("clicked")
-    
-    if (document.body.style.backgroundColor === "azure") {
-        document.body.style.backgroundColor = "black"
-    } else {
-        document.body.style.backgroundColor = "azure"
-    };
-    
-});
+function handleLocalStorage(blogEntry) {
+  const blogEntryArray =
+    JSON.parse(localStorage.getItem("blogEntryArray")) || [];
 
-mode.addEventListener("click", function () {
-    console.log("clicked")
+  blogEntryArray.push(blogEntry);
 
-    if (container.style.backgroundColor === "white") {
-
-        container.style.backgroundColor = "grey"
-    } else {
-        container.style.backgroundColor = "white"
-    };
-    
-});
-
-blogEntry.addEventListener("click", function () {
-    window.location.href = 'http://127.0.0.1:5501/blog.html'
-})
-
-
+  localStorage.setItem("blogEntryArray", JSON.stringify(blogEntryArray));
+}
